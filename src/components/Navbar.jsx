@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Navbar({pokemonList, pokemonIndex, setPokemonIndex}) {
     console.log(pokemonIndex)
@@ -8,6 +8,7 @@ function Navbar({pokemonList, pokemonIndex, setPokemonIndex}) {
       const handleClickPrev = () => {
         setPokemonIndex(pokemonIndex - 1)
       }
+
     return(
         <div>
             {pokemonIndex > 0 ? <button onClick={handleClickPrev}>Précédent</button> : null}
