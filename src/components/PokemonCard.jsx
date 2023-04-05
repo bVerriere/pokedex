@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import {PropTypes} from "prop-types";
 
 function PokemonCard(props) {
     return (
@@ -10,8 +10,8 @@ function PokemonCard(props) {
 }
 
 PokemonCard.propTypes = { 
-    name: PropTypes.string.isRequired,
-    imgSrc: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    imgSrc: PropTypes.string,
 
   }
 
