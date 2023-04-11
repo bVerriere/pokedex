@@ -34,9 +34,9 @@ function App() {
   
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  useEffect(() => {
-    alert("hello pokemon trainer :)")
-  },[])
+  // useEffect(() => {
+  //   alert("hello pokemon trainer :)")
+  // },[])
 
   useEffect(() => {
     if(pokemonIndex === 3){
@@ -48,7 +48,7 @@ function App() {
     <div>
       <MyTitle />
       <div>
-        <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
+        {/* <PokemonCard pokemon={pokemonList[pokemonIndex]}/> */}
       </div>
       <div>
         <Navbar pokemonList={pokemonList} pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex}/>
