@@ -38,17 +38,17 @@ function App() {
   //   alert("hello pokemon trainer :)")
   // },[])
 
-  useEffect(() => {
-    if(pokemonIndex === 3){
-        alert("pika pikachu !!!")
-    }
-  })
+  
+  if(pokemonIndex === 3){
+      alert("pika pikachu !!!")
+  }
+
   
   return (
     <div>
       <MyTitle />
       <div>
-        {/* <PokemonCard pokemon={pokemonList[pokemonIndex]}/> */}
+        <PokemonCard pokemon={pokemonList[pokemonIndex]}/>
       </div>
       <div>
         <Navbar pokemonList={pokemonList} pokemonIndex={pokemonIndex} setPokemonIndex={setPokemonIndex}/>

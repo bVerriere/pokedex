@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import PokemonCard from './PokemonCard';
 
 function Navbar({pokemonList, pokemonIndex, setPokemonIndex}) {
     //console.log(pokemonIndex)
@@ -10,18 +11,12 @@ function Navbar({pokemonList, pokemonIndex, setPokemonIndex}) {
     //   }
 
     return(
-        // <div>
-        //     <button style={{backgroundColor: "white"}}>
-        //         {pokemonList.map((pokemon) => {
-        //             <li> key={pokemon.name}
-        //                 {pokemon.name}
-        //             </li>
-        //         })}
-        //     </button>
-        // </div>
         <ul>
-            {pokemonList.map((pokemon) => {
-                return <button style={{backgroundColor: "white", color: "black"}} key={pokemon.name}>
+            {pokemonList.map((pokemon, index) => {
+                return <button 
+                style={{backgroundColor: "white", color: "black"}} 
+                key={pokemon.name}
+                onClick={() => setPokemonIndex(pokemonIndex = index)}>
                     {pokemon.name}
                 </button>
             })}
